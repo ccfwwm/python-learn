@@ -24,7 +24,7 @@ SECRET_KEY = '09h##=l^*0g1&nv&4sdcfo4$8tw05e&z8u6e=&l)g8w!$i+c3t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '47.96.6.65']
+ALLOWED_HOSTS = ['*', '47.96.6.65', 'ccfwwm.top']
 
 # Application definition
 
@@ -49,6 +49,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ccfwwmtop.urls'
+
+SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
+SITE_ROOT = os.path.abspath(os.path.join(SITE_ROOT, '../'))
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+]
 
 TEMPLATES = [
     {
@@ -119,5 +128,3 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
-STATIC_URL = '/static/'
